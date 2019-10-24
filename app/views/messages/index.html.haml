@@ -1,4 +1,4 @@
-
+   
 .left
   .side__user
     = current_user.name
@@ -17,12 +17,17 @@
           .group__chat
             = group.show_last_message
 .main
+   
   .main__group
-    グループ名
+    = link_to @group.name, group_path(@group)
   .main__botan  
-    Edit   
+    = link_to 'edit', edit_group_path(@group)
+    
   .main__menber
-    メンバー名
+    - @group.users.each do |user|
+      = user.name
+  
+    
 
 .main3
   = render @messages
@@ -33,16 +38,14 @@
   .main3__date
     
   .main3__chat
-     
-.footer
-  .text
-    テキストテキスト
-    .icon
-      = fa_icon 'image'
-  .btn
-    send
 
-
+-# .footer
+-#   .text
+-#     テキストテキスト
+-#     .icon
+-#       = fa_icon 'image'
+-#   .btn
+-#     send
 .form
   = form_for [@group, @message] do |f|
     = f.text_field :content, class: 'form__message', placeholder: 'type a message'
@@ -51,26 +54,3 @@
         = fa_icon 'picture-o', class: 'icon'
         = f.file_field :image, class: 'hidden'
     = f.submit 'Send', class: 'form__submit'
-
-
-
-
-
-
-
-
-
-    
-
-  
-  
-     
-     
-    
-      
- 
-
-
-    
-
-       
