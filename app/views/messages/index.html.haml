@@ -1,0 +1,46 @@
+   
+.left
+  .side__user
+    = current_user.name
+    .side__icon
+    = link_to edit_user_path(current_user) do
+      = fa_icon 'cog', class: 'icon'
+    = link_to  new_group_path do  
+      = fa_icon 'pencil-square-o',class: 'icon'
+   
+  .groups 
+    .group
+      - current_user.groups.each do |group|
+        =link_to group_messages_path(group) do
+          .group__name
+            = group.name
+          .group__chat
+            = group.show_last_message
+
+.main
+  .main__group
+    = link_to @group.name, group_path(@group),class:'groupname'
+  .btn  
+    = link_to 'edit', edit_group_path(@group),class: "edit"
+  .main__menber
+    - @group.users.each do |user|
+      = user.name
+
+.main3
+  = render @messages
+  .main2
+  
+  .main3__user
+  
+  .main3__date
+    
+  .main3__chat
+
+.form
+  = form_for [@group, @message] do |f|
+    = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+    .form__mask
+      = f.label :image, class: 'form__mask__image' do
+        = fa_icon 'picture-o', class: 'icon'
+        = f.file_field :image, class: 'hidden'
+    = f.submit 'Send', class: 'form__submit'
