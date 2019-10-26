@@ -90,38 +90,39 @@
   color: #38AEF0;
   text-decoration: none;
 }
-
-.main3{
+.main5{
   height: calc(100vh - 190px);
-    padding: 46px 40px;
-    background-color: #fafafa;
-    overflow: scroll;
-    box-sizing: border-box;
-      &__main2{
+      padding: 46px 40px;
+      background-color: #fafafa;
+      overflow: scroll;
       box-sizing: border-box;
-      height: 50px;
-      width: calc(100vw - 300px);
-      float: right;
-      }
-      &__user{
-        padding-top: 46px;
-        font-size: 16px;
-        font-weight: bold;
-        color: #434A54;
-        text-indent: 40px;
-        float: left;
-      }
-      &__date{
-        font-size: 12px;
-        color: #999999;
-        padding-top: 46px;
-        text-indent: 10px;
-      }
-      &__chat{
-        font-size: 14px;
-        color: #434a54;
-        padding-top: 10px;
-        text-indent: 40px;
+    .main3{
+        &__main2{
+        box-sizing: border-box;
+        height: 50px;
+        width: calc(100vw - 300px);
+        float: right;
+        }
+        &__user{
+          padding-top: 46px;
+          font-size: 16px;
+          font-weight: bold;
+          color: #434A54;
+          // text-indent: 40px;
+          float: left;
+        }
+        &__date{
+          font-size: 12px;
+          color: #999999;
+          padding-top: 46px;
+          text-indent: 10px;
+        }
+        &__chat{
+          font-size: 14px;
+          color: #434a54;
+          padding-top: 10px;
+          // text-indent: 40px;
+        }
       }
     }
     .form {
