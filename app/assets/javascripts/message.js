@@ -39,7 +39,6 @@ $(document).on('turbolinks:load', function(){
       
       $('.main4').append(html);
       $('.new_message')[0].reset();
-      console.log(data)
       var target = $('.main3').last();
       var position = target.offset().top + $('.main5').scrollTop();
 
