@@ -47,7 +47,6 @@ $(document).on('turbolinks:load', function(){
       }, 300, 'swing');
     })
     .fail(function(data){
-      console.log(data)
       alert('エラーが発生したためメッセージは送信できませんでした。');
     })
     .always(function(data){
