@@ -99,8 +99,8 @@
 
   .field-input {
     .field_with_errors {
+      
       position: relative;
-
       &:after {
         content: '';
         display: block;
