@@ -1,7 +1,7 @@
-.main3
+.main3{data: {id:"#{message.id}"}}
   .main2
   .main3__user
-    = message.user.name
+    = message.user.name 
   .main3__date
     = message.created_at.strftime("%Y/%m/%d %H:%M")
   .main3__chat
