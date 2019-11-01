@@ -1,6 +1,6 @@
 # config valid only for current version of Capistrano
 
-lock '(3.11.2)'
+lock (3.11.2)
 
 set :application, 'chat-space'
 
