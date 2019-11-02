@@ -12,7 +12,7 @@ set :rbenv_type, :user
 set :rbenv_ruby, '2.5.1' 
 
 set :ssh_options, auth_methods: ['publickey'],
-                  keys: ['/home/ec2-user/.ssh/id_rsa']  
+                  keys: ['uverworld.pem']  
 
 set :unicorn_pid, -> { "#{shared_path}/tmp/pids/unicorn.pid" }
 
