@@ -23,8 +23,9 @@
   .btn  
     = link_to 'edit', edit_group_path(@group),class: "edit"
   .main__menber
+    Member : 
     - @group.users.each do |user|
-      = user.name
+      =user.name
 .main5
   .main4
     = render @messages

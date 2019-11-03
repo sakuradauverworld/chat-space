@@ -1,5 +1,4 @@
 $(document).on('turbolinks:load', function(){
-
   function buildHTML(message) {
     var content = message.content ? `${ message.content }` : "";
     var img = message.image ? `<img src= ${ message.image }>` : "";
@@ -20,7 +19,6 @@ $(document).on('turbolinks:load', function(){
                 </div>`
   return html;
   }
-
   $('#new_message').on('submit', function(e){
     e.preventDefault();
     var message = new FormData(this);
@@ -33,15 +31,13 @@ $(document).on('turbolinks:load', function(){
       processData: false,
       contentType: false
     })
-    .done(function(data){
     
+    .done(function(data){
       var html = buildHTML(data);
-      
       $('.main4').append(html);
       $('.new_message')[0].reset();
       var target = $('.main3').last();
       var position = target.offset().top + $('.main5').scrollTop();
-
       $('.main5').animate({
         scrollTop: position
       }, 300, 'swing');
@@ -53,6 +49,7 @@ $(document).on('turbolinks:load', function(){
       $('.form__submit').prop('disabled', false);
     })
   })
+  
   var reloadMessages = function() {
     if (window.location.href.match(/\/groups\/\d+\/messages/)){
      last_message_id = $('.main3:last').data("id");

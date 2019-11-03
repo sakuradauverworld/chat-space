@@ -12,37 +12,34 @@
 .left{
   float: left;
    .side__user {
-    padding-top: 20px;
-    width: 300px;
-    height: 100px;
+    padding: 0 20px;
+    width: 260px;
+    height: 70px;
     background-color: #253141;
     font-size: 16px;
     font-weight: bold;
-    line-height: 35px;
-    text-indent: 20px;
-    z-index: 1;
     color: #ffffff;
+    padding-top: 30px;
     } 
   .icon{
-    padding-right: 20px;
     color: #ffffff ;
-    display: inline-block;
     float: right;
-      }
-    
+    margin-left: 10px;
+    display: flex;
+    }
   }
    
 
   .group{
     width: 300px;
-    height: 618px;
+    height: calc(100vh - 100px);
     background-color: #2f3e51;
     text-indent: 20px;
     font-weight: bold;
     &__name{
     font-size: 15px;
     padding-top: 20px;
-    color: #fafafa;
+    color: #ffffff;
    }
     &__chat{
     font-size: 11px;
@@ -53,7 +50,7 @@
   }
 
   .main{
-    height: 120px;
+    height: 100px;
     border: #eeeeee;
     margin-right: 40px;
     &__group{  
@@ -66,7 +63,7 @@
    &__menber{  
     font-size: 12px;
     color: #999999;
-    padding-top: 70px;
+    padding-top: 85px;
     text-indent: 40px;
    }
    .btn{
