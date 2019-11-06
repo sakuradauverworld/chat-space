@@ -1,4 +1,4 @@
-$(document).on('turbolinks:load', function(){
+$(document).on('turbolinks:load', function(){ 
 $(function() {
   function addUser(user) {
     let html = `
@@ -57,7 +57,7 @@ $(function() {
       });
   });
   
-  $(document).on("click", ".user-search-add", function() {
+  $("#user-search-result").on("click", ".user-search-add", function() {
     const userName = $(this).attr("data-user-name");
     const userId = $(this).attr("data-user-id");
     $(this).parent().remove();
@@ -69,5 +69,5 @@ $(function() {
     .parent()
     .remove();
   });
-});
+ });
 });
