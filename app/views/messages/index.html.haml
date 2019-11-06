@@ -21,7 +21,7 @@
   .main__group
     = link_to @group.name, group_path(@group),class:'groupname'
   .btn  
-    = link_to 'edit', edit_group_path(@group),class: "edit"
+    = link_to 'Edit', edit_group_path(@group),class: "edit"
   .main__menber
     Member : 
     - @group.users.each do |user|

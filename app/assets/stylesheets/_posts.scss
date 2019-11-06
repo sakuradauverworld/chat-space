@@ -67,13 +67,8 @@
     text-indent: 40px;
    }
    .btn{
-    color: #38AEF0;
     text-align: center;
-    width: 100px;
     border: solid 1px #38aef0;
-    margin: 0 20x;
-    height: 40px;
-    font-size: 30px;
     margin-top: 28px;
     float: right;
    }
@@ -86,10 +81,14 @@
 .edit{
   color: #38AEF0;
   text-decoration: none;
+  font-weight: lighter;
+  padding: 0 20px;
+  line-height: 40px;
 }
 .main5{
   height: calc(100vh - 190px);
-      padding: 46px 40px;
+      padding-left: 40px;
+      padding-top: 46px;
       background-color: #fafafa;
       overflow: scroll;
       box-sizing: border-box;
@@ -101,7 +100,6 @@
         float: right;
         }
         &__user{
-          padding-top: 46px;
           font-size: 16px;
           font-weight: bold;
           color: #434A54;
@@ -110,13 +108,13 @@
         &__date{
           font-size: 12px;
           color: #999999;
-          padding-top: 46px;
           text-indent: 10px;
         }
         &__chat{
           font-size: 14px;
           color: #434a54;
           padding-top: 10px;
+          padding-bottom: 46px;
         }
       }
     }
@@ -124,20 +122,21 @@
       background-color: #DDDDDD;
       box-sizing: border-box;
       height: 90px;
-      padding: 20px 50px 20px 40px;
+      padding: 20px 40px;
       float: right;
       width: calc(100vw - 300px);
       &__message {
+        padding: 0 40px 0 10px;
         border: none;
         float: left;
         height: 50px;
-        width: calc(100% - 150px);
+        width: calc(100% - 215px);
       }
       &__mask {
         background-color: $white;
         float: left;
         height: 50px;
-        padding-right: 10px;
+        padding-right: 25px;
         &__image {
           font-size: 20px;
           line-height: 50px;
