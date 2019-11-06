@@ -18,6 +18,7 @@ $(function() {
     `;
     $("#user-search-result").append(html);
   }
+  
   function addDeleteUser(name, id) {
     let html = `
     <div class="chat-group-user clearfix" id="${id}">
@@ -26,6 +27,7 @@ $(function() {
     </div>`;
     $(".js-add-user").append(html);
   }
+  
   function addMember(userId) {
     let html = `<input value="${userId}" name="group[user_ids][]" type="hidden" id="group_user_ids_${userId}" />`;
     $(`#${userId}`).append(html);
@@ -40,7 +42,6 @@ $(function() {
     })
       .done(function(users) {
         $("#user-search-result").empty();
-
         if (users.length !== 0) {
           users.forEach(function(user) {
             addUser(user);
@@ -55,6 +56,7 @@ $(function() {
         alert("通信エラーです。ユーザーが表示できません。");
       });
   });
+  
   $(document).on("click", ".user-search-add", function() {
     const userName = $(this).attr("data-user-name");
     const userId = $(this).attr("data-user-id");

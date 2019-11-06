@@ -51,7 +51,7 @@ $(document).on('turbolinks:load', function(){
   })
   
   var reloadMessages = function() {
-    if (window.location.href.match(/\/groups\/\d+\/messages/)){
+    function update(){ 
      last_message_id = $('.main3:last').data("id");
       $.ajax({
         url: "api/messages",
