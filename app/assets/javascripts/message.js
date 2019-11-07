@@ -49,10 +49,9 @@ $(document).on('turbolinks:load', function(){
       $('.form__submit').prop('disabled', false);
     })
   })
-  
+
   var reloadMessages = function() {
-    function update(){ 
-     last_message_id = $('.main3:last').data("id");
+      last_message_id = $('.main3:last').data("id");
       $.ajax({
         url: "api/messages",
         type: 'get',
@@ -60,17 +59,15 @@ $(document).on('turbolinks:load', function(){
         data: {id: last_message_id}
       })
       .done(function(messages) {
-        var insertHTML = '';
         messages.forEach(function (message) {
           insertHTML = buildHTML(message); 
           $('.main4').append(insertHTML);
-        })
         $('.main5').animate({scrollTop: $('.main5')[0].scrollHeight}, 'fast');
       })
       .fail(function () {
         alert('自動更新に失敗しました');
       });
-     }
+    });
     };
     setInterval(reloadMessages, 5000);
- });
+  });
