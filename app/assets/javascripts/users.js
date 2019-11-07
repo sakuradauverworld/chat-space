@@ -69,5 +69,10 @@ $(function() {
     .parent()
     .remove();
   });
+  $(document).on("click", ".chat-group-user__btn", function() {
+    $(this)
+    .parent()
+    .remove();
+  });
  });
 });
