@@ -69,7 +69,7 @@ $(function() {
     .parent()
     .remove();
   });
-  $(document).on("click",".chat-group-user__remove",function() {
+  $(document).on("click",".user-search-remove",function() {
     $(this)
     .parent()
     .remove();
